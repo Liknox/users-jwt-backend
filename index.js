@@ -14,9 +14,7 @@ app.use("/auth", authRouter)
 
 const start = async () => {
 	try {
-		await mongoose.connect(
-			process.env.MONGO
-		)
+		await mongoose.connect(process.env.MONGO)
 		app.listen(PORT, () => console.log(`Server is successfully started on ${PORT} port.`))
 	} catch (err) {
 		console.log(err)
